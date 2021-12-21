@@ -74,6 +74,14 @@ while 1:
                 if selected[1] <= 8 and selected[0] <= 8:
                     num = ord(event.unicode) - ord('0')
                     board[selected[1]][selected[0]] = num
+            if event.key == pygame.K_LEFT:
+                selected = (selected[0] - 1, selected[1])
+            if event.key == pygame.K_RIGHT:
+                selected = (selected[0] + 1, selected[1])
+            if event.key == pygame.K_DOWN:
+                selected = (selected[0], selected[1] + 1)
+            if event.key == pygame.K_UP:
+                selected = (selected[0], selected[1] - 1)
 
         if event.type == pygame.MOUSEBUTTONUP:
             x, y = pygame.mouse.get_pos()
