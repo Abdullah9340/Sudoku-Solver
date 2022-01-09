@@ -1,3 +1,5 @@
+
+#Backtracking function
 def solve(bo):
     find_pos = find_empty(bo)
     if not find_pos:
@@ -13,7 +15,7 @@ def solve(bo):
 
     return False
 
-
+# Check if a certain position is valid
 def is_valid(bo, num, pos):
     # check rows
     for i in range(len(bo)):
@@ -34,7 +36,7 @@ def is_valid(bo, num, pos):
                 return False
     return True
 
-
+# Find the next empty square
 def find_empty(bo):
     for i in range(len(bo)):
         for j in range(len(bo[i])):
